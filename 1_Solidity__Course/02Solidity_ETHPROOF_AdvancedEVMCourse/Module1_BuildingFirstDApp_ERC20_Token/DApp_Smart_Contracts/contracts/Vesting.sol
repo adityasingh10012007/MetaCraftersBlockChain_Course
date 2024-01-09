@@ -5,12 +5,14 @@ pragma solidity ^0.8;
 import "./Token.sol";
 
 contract Vesting {
+    // Adress of the contract owner 
     address public owner;
 
     constructor() {
         owner = msg.sender;
     }
 
+// Declared a struct to define an organization and its related information
     struct Organization {
         string tokenName;
         string tokenSymbol;
@@ -24,9 +26,11 @@ contract Vesting {
     }
 
     address[] internal orgs; // to show users which organsations are there.
+    // Mapping of adress to thier coreesponding organization
     mapping(address => Organization) public organisations;
+    // Mapping organization to thier names 
     mapping(address => string) public organisationName;
-
+    // Function to register a new organization 
     function register(
         address _organization,
         string memory _tokenName,
@@ -38,6 +42,7 @@ contract Vesting {
         string[] memory _stakeholderType,
         uint256[] memory _vestedAmt
     ) public {
+
         Organization storage org = organisations[_organization];
         org.tokenName = _tokenName;
         org.totalSupply = _totalSupply;
@@ -57,7 +62,7 @@ contract Vesting {
         );
         orgs.push(_organization);
     }
-
+    // Function to withdraw the tokens 
     function withdrawTokens(address _user, address _organization)
         public
         returns (bool)
@@ -73,6 +78,7 @@ contract Vesting {
         return true;
     }
 
+    // Function to check the availability of the organization
     function isOrg(address _user) public view returns (bool) {
         for (uint256 i = 0; i < orgs.length; i++) {
             if (_user == orgs[i]) {
@@ -81,7 +87,7 @@ contract Vesting {
         }
         return false;
     }
-
+    // function to get orgs
     function getOrgs()
         public
         view
