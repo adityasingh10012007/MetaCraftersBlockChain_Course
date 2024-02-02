@@ -208,7 +208,8 @@ export default function Home() {
 
 
   return (
-    <main className="flex w-full items-center justify-center flex-col flex-wrap  bg-gradient-to-r from-green-400 via-teal-500 to-blue-500">
+    // <main className="flex w-full items-center justify-center flex-col flex-wrap  bg-gradient-to-r from-green-400 via-teal-500 to-blue-500">
+    <main className="flex w-full items-center justify-center flex-col flex-wrap  bg-white">
       <Head>
         <title>Vesting</title>
       </Head>
