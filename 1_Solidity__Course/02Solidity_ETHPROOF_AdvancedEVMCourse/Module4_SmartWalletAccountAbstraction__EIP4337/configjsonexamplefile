@@ -1,0 +1,42 @@
+
+{
+  
+  "rpcUrl": "https://api.stackup.sh/v1/node/b9dc7eabb072875e8dc5047f40964306b92af8361bed1d54dabb527d63c86066",
+  "signingKey": "0x2ccb798cf398b0be45c7dcd9e09edf8b66f42a228273d4bd9d2ac917f4b7517a",
+  "entryPoint": "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789",
+  "simpleAccountFactory": "0x9406Cc6185a346906296840746125a0E44976454",
+  "paymaster": {
+    "rpcUrl": "https://api.stackup.sh/v1/paymaster/b9dc7eabb072875e8dc5047f40964306b92af8361bed1d54dabb527d63c86066",
+    "context": { "type" : "payg"}
+  },
+
+
+
+
+  "Anatomy of the config.json file  "  : "  SEE BELOW ===>",
+
+  "1st" : " rpcUrl ==> URL of an ERC-4337 bundler and node" ,
+  "2nd" : " signingKey ==> Private key that can sign transactions for the Smart Account " ,
+  "3rd" : " entryPoint ==> Address of the EntryPoint contract  " ,
+  "4th" : " simpleAccountFactory  ==>  Address of the factory that will create the account   " ,
+  "5th" : " paymaster ==>  URL of the Paymaster service you are using and context (optional)  " ,
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  "comment comment comment comment1 " : " check the link below",
+  "comment comment comment comment2 " : " check the link below",
+  "comment comment comment comment3 " : " check the link below",
+  "check this link ==> " : "https://docs.stackup.sh/docs/getting-started"
+}
+  
